@@ -40,7 +40,6 @@ class CommentsController < ApplicationController
         format.html { render :new }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
-    end
   end
 
   # PATCH/PUT /comments/1
