@@ -9,6 +9,22 @@
   </head>
 
   <body>
+<div class="pull-right">
+    <a href="/">Home</a>
+
+    <% if current_user %>
+    <a href="/profile">Profile</a>
+    <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+  <% else %>
+    <a href="/users/sign_in">Login</a>
+    <a href="/users/sign_up">Sign up</a>
+  <% end %>
+</div>
+
+
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
