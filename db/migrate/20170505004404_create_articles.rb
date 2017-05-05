@@ -9,6 +9,7 @@ class CreateArticles < ActiveRecord::Migration[5.0]
       t.boolean :published
 
       t.timestamps
+      t.belongs_to :user
     end
   end
 end

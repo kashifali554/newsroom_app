@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :comments
   resources :articles
 
-  root to: "articles#home"
+  root "articles#home"
   get '/profile', to: "user#profile"
 end
