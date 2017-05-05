@@ -14,7 +14,8 @@
 
     <% if current_user %>
     <a href="/profile">Profile</a>
-    <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+    <a href="/articles">articles</a>
+    <%= link_to "Sign Out", destroy_user_session_path %>
   <% else %>
     <a href="/users/sign_in">Login</a>
     <a href="/users/sign_up">Sign up</a>
