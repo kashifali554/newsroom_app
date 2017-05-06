@@ -33,10 +33,10 @@
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>
 <br>
-
+<div>
 <%= render @article.comments %>
 
-<%= render 'comments/new', article: @article %>
+</div>
 
-<button type="button" class="btn btn-primary">Primary</button>
+<%= render 'comments/new', article: @article %>
 

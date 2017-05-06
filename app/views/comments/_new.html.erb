@@ -1,4 +1,4 @@
-<%= form_for([ @article, current_user.comments.new ], remote: true) do |form| %>
+<%= form_for([ @article, current_user.comments.create ], remote: true) do |form| %>
   Comments:<br>
 <%= form.text_area :body, size: '30x10' %><br>
 <%= form.submit %>
