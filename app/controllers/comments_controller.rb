@@ -1,8 +1,8 @@
 class CommentsController < ApplicationController
   # before_action :set_comment
-  # before_action :set_comment, only: [:show, :edit, :update, :destroy]
-  # before_action :authenticate_user!, except: [:index, :show]
-  # before_action :current_user, only: [:edit, :update, :destroy]
+  before_action :set_comment, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :current_user, only: [:edit, :update, :destroy]
 
   # GET /comments
   # GET /comments.json
@@ -32,7 +32,7 @@ class CommentsController < ApplicationController
   def create
     @comment = current_user.comments.build(comment_params)
       # redirect_to @article
-    # respond_to do |format|
+    respond_to do |format|
       if @comment.save
         format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
@@ -40,6 +40,7 @@ class CommentsController < ApplicationController
         format.html { render :new }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
+    end
   end
 
   # PATCH/PUT /comments/1

@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= f.label :category %>
-    <%= f.text_field :category %>
+    <%= f.select :category, ['Latest', 'US', 'Politics', 'Business', 'Sports', 'Opinion']%>
   </div>
 
   <div class="field">
@@ -45,3 +45,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+

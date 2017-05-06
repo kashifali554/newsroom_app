@@ -12,5 +12,15 @@
  *
  *= require_self
  */
+
+
+
 @import "bootstrap-sprockets";
-@import "bootstrap"
+@import "bootstrap";
+
+@import "articles";
+@import "comments";
+@import "user";
+
+
+
