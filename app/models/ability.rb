@@ -3,10 +3,10 @@ class Ability
 
   def initialize(user)
 
-    if user.role == 2
+    if user && user.role == 2
       can :manage, :all
 
-    else user.role == 1
+    else user && user.role == 1
 
       can :create, Article do |article|
           article.user = user
@@ -25,7 +25,7 @@ class Ability
       end
     end
 
-    else user.role == nil
+    else user && user.role == nil
       can :read, :all
 
       can :create, Comment do |comment|

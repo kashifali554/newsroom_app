@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  # before_action :load_and_authorize_resource
   before_action :set_article, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :current_user, only: [:edit, :update, :destroy]
@@ -26,12 +27,12 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
-    if authorize!
+    # if can? :update, article
+    #   redirect_to edit_article_path
+    # end
+    if current_user != @article.user
       redirect_to "/articles"
     end
-    # if current_user != @article.user
-    #   redirect_to "/articles"
-    # end
   end
 
   # POST /articles
