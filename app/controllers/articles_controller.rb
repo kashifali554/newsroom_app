@@ -26,9 +26,12 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
-    if current_user != @article.user
+    if authorize!
       redirect_to "/articles"
     end
+    # if current_user != @article.user
+    #   redirect_to "/articles"
+    # end
   end
 
   # POST /articles
