@@ -35,7 +35,7 @@ class CommentsController < ApplicationController
     @comment.article_id = params[:article_id].to_i  # redirect_to @article
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to :article_id, notice: 'Comment was successfully created.' }
+        format.html { redirect_to article_path(@comment.article), notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new }
