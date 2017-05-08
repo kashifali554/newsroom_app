@@ -14,7 +14,7 @@
 
     <% if current_user %>
     <a href="/profile">Profile</a>
-    <a href="/articles">articles</a>
+    <a href="/articles">Articles</a>
     <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
   <% else %>
     <a href="/users/sign_in">Login</a>
@@ -26,6 +26,11 @@
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+
+    <div class="container">
+          <%= yield %>
+    </div>
+
+    <script id="dsq-count-scr" src="//newsroom-app.disqus.com/count.js" async></script>
   </body>
 </html>

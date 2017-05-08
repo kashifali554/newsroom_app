@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  # load_and_authorize_resource
   before_action :set_article, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :current_user, only: [:edit, :update, :destroy]
@@ -17,16 +18,27 @@ class ArticlesController < ApplicationController
   # GET /articles/1.json
   def show
     @article = Article.find(params[:id])
+    # @comment = Comment.new
   end
 
   # GET /articles/new
   def new
     @article = current_user.articles.build
+
+    if can? :create, @article
+    end
+
+    if cannot? :create, @article
+      redirect_to "/articles"
+    end
+
   end
 
   # GET /articles/1/edit
   def edit
-    if current_user != @article.user
+    if can? :update, @article
+    end
+    if cannot? :update, @article
       redirect_to "/articles"
     end
   end
@@ -39,7 +51,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.save
-        format.html { redirect_to @article, notice: 'Article was successfully created.' }
+        format.html { redirect_to "/articles", notice: 'Article was successfully created.' }
         format.json { render :show, status: :created, location: @article }
       else
         format.html { render :new }
@@ -65,12 +77,12 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   # DELETE /articles/1.json
   def destroy
-    if current_user != @article.user
-      redirect_to "/articles"
-    end
+    # if current_user != @article.user
+    #   redirect_to "/articles"
+    # end
     @article.destroy
     respond_to do |format|
-      format.html { redirect_to articles_url, notice: 'Article was successfully destroyed.' }
+      format.html { redirect_to articles_path, notice: 'Article was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
