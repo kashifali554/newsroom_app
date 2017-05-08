@@ -11,38 +11,41 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :headline %>
-    <%= f.text_field :headline %>
+  <div class="container">
+    <div class="field">
+      <%= f.label :headline %><br>
+      <%= f.text_field :headline %>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.label :img %><br>
+      <%= f.text_field :img %>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.label :text %><br>
+      <%= f.text_area :text %>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.label :tags %><br>
+      <%= f.text_field :tags %>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.label :category %><br>
+      <%= f.select :category, ['Latest', 'US', 'Politics', 'Business', 'Sports', 'Opinion']%>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.label :publish %><br>
+      <%= f.check_box :published %>
+    </div>
+    <br>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+    <% end %>
   </div>
 
-  <div class="field">
-    <%= f.label :img %>
-    <%= f.text_field :img %>
-  </div>
-
-  <div class="field">
-    <%= f.label :text %>
-    <%= f.text_area :text %>
-  </div>
-
-  <div class="field">
-    <%= f.label :tags %>
-    <%= f.text_field :tags %>
-  </div>
-
-  <div class="field">
-    <%= f.label :category %>
-    <%= f.select :category, ['Latest', 'US', 'Politics', 'Business', 'Sports', 'Opinion']%>
-  </div>
-
-  <div class="field">
-    <%= f.label :published %>
-    <%= f.check_box :published %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
 
