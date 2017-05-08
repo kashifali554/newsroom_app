@@ -1,1 +1,5 @@
-<%= comment.body %> -- <% comment.created_at.to_s(:long) %>
+<div class="containar-fluid comment">
+  <p><%= comment.user.email %></p>
+  <p><%= comment.body %></p>
+</div>
+
