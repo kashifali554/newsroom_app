@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   #   resources :comments, except: [:edit, :update, :destroy]
   # end
 
-  root "articles#home"
+  root "articles#index"
   get '/profile', to: "user#profile"
 end
