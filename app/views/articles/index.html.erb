@@ -20,7 +20,7 @@
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.headline %></td>
-        <td><%= article.img %></td>
+        <td><%= image_tag article.img, :class => "image_small" %></td>
         <td><%= article.text.html_safe %></td>
         <td><%= article.tags %></td>
         <td><%= article.category %></td>

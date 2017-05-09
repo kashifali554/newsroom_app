@@ -2,11 +2,11 @@
 
 <div class="jumbotron">
 <p>
-  <%= @article.headline %>
+  <h2><%= @article.headline %></h2>
 </p>
 
 <p>
-  <%= @article.img %>
+  <%= image_tag @article.img, :class => "style_image" %>
 </p>
 
 <p>
