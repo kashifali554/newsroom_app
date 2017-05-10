@@ -8,6 +8,7 @@
 <p>
   <%= image_tag @article.img, :class => "style_image" %>
 </p>
+<p><%= social_share_button_tag(@article.headline)%></p>
 <p><% @article.category %></p>
 <p>
   <h4>By: <%= @article.user.email %></h4>
