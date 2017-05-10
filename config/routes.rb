@@ -9,6 +9,9 @@ Rails.application.routes.draw do
 
   root "articles#index"
 
+  get '/manage', to: "articles#manage"
+  get '/search', to: "articles#search"
+
   get '/latest', to: "articles#latest"
   get '/us', to: "articles#us"
   get '/politics', to: "articles#politics"

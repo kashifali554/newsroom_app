@@ -4,6 +4,14 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :current_user, only: [:edit, :update, :destroy]
 
+  def search
+    @articles = Article.all
+  end
+
+  def manage
+    @articles = Article.all
+  end
+
   def latest
     @articles = Article.all
   end

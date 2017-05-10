@@ -90,3 +90,8 @@ right navbar
   <%= link_to 'Create new article', new_article_path, :class => "btn btn-primary" %>
 <% end %>
 </div>
+
+
+      <%= label_tag(:q, "Search for:") %>
+      <%= text_field_tag(:q) %>
+      <%= submit_tag("Search") %>

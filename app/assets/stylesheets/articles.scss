@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.img-admin{
+  height: 140px;
+  width: 140px;
+}
+
 .field {
   margin-left: 100px;
 }
@@ -27,6 +32,7 @@
 
 .image_small{
   width: 20em;
+  height: 20em;
 }
 
 .e-options{
