@@ -1,4 +1,28 @@
 <% @articles.each do |article| %>
+  <% if article.category == 'latest' %>
+    <% link_to article.category, '/latest' %>
+  <% end %>
+
+  <% if article.category == 'us' %>
+    <% link_to article.category, '/us' %>
+  <% end %>
+
+  <% if article.category == 'politics' %>
+    <% link_to article.category, '/politics' %>
+  <% end %>
+
+  <% if article.category == 'business' %>
+    <% link_to article.category, '/business' %>
+  <% end %>
+
+  <% if article.category == 'sports' %>
+    <% link_to article.category, '/sports' %>
+  <% end %>
+
+  <% if article.category == 'opinion' %>
+    <% link_to article.category, '/opinion' %>
+  <% end %>
+
   <div class="row">
     <%= image_tag article.img, :class => "image_small" %>
     <p><%= link_to article.headline, article %></p>

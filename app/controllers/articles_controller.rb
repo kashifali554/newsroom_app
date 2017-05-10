@@ -4,8 +4,28 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :current_user, only: [:edit, :update, :destroy]
 
-  def home
-    render @home
+  def latest
+    @articles = Article.all
+  end
+
+  def us
+    @articles = Article.all
+  end
+
+  def politics
+    @articles = Article.all
+  end
+
+  def business
+    @articles = Article.all
+  end
+
+  def sports
+    @articles = Article.all
+  end
+
+  def opinion
+    @articles = Article.all
   end
 
   # GET /articles

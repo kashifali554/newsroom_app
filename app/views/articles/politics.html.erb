@@ -1,0 +1,6 @@
+<% @articles.each do |article| %>
+  <% if article.category == 'politics' %>
+    <%= image_tag article.img, :class => "image_small" %>
+    <p><%= link_to article.headline, article %></p>
+    <% end %>
+<% end %>

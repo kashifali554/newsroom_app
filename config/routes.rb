@@ -8,5 +8,13 @@ Rails.application.routes.draw do
   # end
 
   root "articles#index"
+
+  get '/latest', to: "articles#latest"
+  get '/us', to: "articles#us"
+  get '/politics', to: "articles#politics"
+  get '/business', to: "articles#business"
+  get '/sports', to: "articles#sports"
+  get '/opinion', to: "articles#opinion"
+
   get '/profile', to: "user#profile"
 end

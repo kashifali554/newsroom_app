@@ -1,0 +1,8 @@
+<% @articles.each do |article| %>
+  <% if article.category == 'latest' %>
+    <%= image_tag article.img, :class => "image_small" %>
+    <p><%= link_to article.headline, article %></p>
+    <% end %>
+<% end %>
+
+
