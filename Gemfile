@@ -24,6 +24,7 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem "autoprefixer-rails"
 gem 'devise-bootstrap-views'
 gem 'cancancan', '~> 1.10'
+gem 'social-share-button', '0.2.1'
 
 
 # Use jquery as the JavaScript library
