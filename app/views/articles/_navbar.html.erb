@@ -1,0 +1,23 @@
+<div class="nav">
+  <ul>
+    <li class="home"><a href="/">Home</a></li>
+    <li class="home"><a href="/latest">Latest</a></li>
+    <li class="tutorials"><a href="/us">US</a></li>
+    <li class="about"><a href="/politics">Politics</a></li>
+    <li class="news"><a href="/business">Business</a></li>
+    <li class="contact"><a href="/sports">Sports</a></li>
+    <li class="contact"><a href="/opinion">Opinion</a></li>
+    <div class="pull-right">
+      <% if current_user %>
+        <li class="contact"><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+      <% else %>
+      <li class="contact"><a href="/users/sign_in">Login</a></li>
+      <li class="contact"><a href="/users/sign_up">Sign up</a></li>
+      <% end %>
+      <% if can? :create, @article %>
+        <li><%= link_to 'Create new article', new_article_path, :class => "btn btn-primary" %></li>
+      <% end %>
+    <div>
+
+  </ul>
+</div>
