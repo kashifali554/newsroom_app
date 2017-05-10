@@ -24,8 +24,8 @@ Admin can assign user rules into user database(stretch).
 # Tech
 - Front-end: Bootstrap, Sass
 - Back-end: Ruby on Rails
-- Auth: Devise, Rails Admin
-- Other:
+- Auth: Devise, CanCanCan
+- Other: Social Share, Trix Editor
 
 
 # Best Code:
@@ -41,9 +41,15 @@ Admin can assign user rules into user database(stretch).
 # Stretch: 
 - Make URL Pretty 
 - Add badges on profiles 
-- Make tags clickable, trending stories etc.
+- Make tags clickable.
+- trending stories etc.
 
 # Future Development ideas
+- Make URL Pretty 
+- Add badges on profiles 
+- Make tags clickable.
+- trending stories with view counts in aside.
+- Add more features in Manage panel.
 
 # Contributor
 - Kashif Ali: https://www.linkedin.com/in/chkashifali
