@@ -22,6 +22,9 @@
     <a href="/users/sign_in">Login</a>
     <a href="/users/sign_up">Sign up</a>
   <% end %>
+  <% if can? :create, @article %>
+  <%= link_to 'Create new article', new_article_path, :class => "btn btn-primary" %>
+<% end %>
 </div>
 
 
