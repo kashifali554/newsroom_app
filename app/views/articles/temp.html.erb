@@ -1,0 +1,47 @@
+//Form queries
+
+    <div class="field">
+      <%= f.label :tags %><br>
+      <%= f.text_field :tags %>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.label :category %><br>
+      <%= f.select :category, ['Latest', 'US', 'Politics', 'Business', 'Sports', 'Opinion']%>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.label :publish %><br>
+      <%= f.check_box :published %>
+    </div>
+
+
+
+
+        <td><%= article.tags %></td>
+        <td><%= article.category %></td>
+        <td><%= article.published %></td>
+        <td><%= article.text.html_safe %></td>
+
+
+      <th>Tags</th>
+      <th>Category</th>
+      <th>Published</th>
+      <th>Text</th>
+
+
+// Show/:id page
+<p>
+  <strong>Tags:</strong>
+  <%= @article.tags %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @article.category %>
+</p>
+
+<p>
+  <strong>Published:</strong>
+  <%= @article.published %>
+</p>

@@ -10,30 +10,25 @@
 </p>
 
 <p>
+  <h4>By: <%= @article.user.email %></h4>
+</p>
+
+<p>
+  <h4> Last updated <%= time_ago_in_words @article.updated_at %> ago</h4>
+</p>
+<hr>
+<p>
   <%= @article.text.html_safe %>
 </p>
 
-<p>
-  <strong>Tags:</strong>
-  <%= @article.tags %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @article.category %>
-</p>
-
-<p>
-  <strong>Published:</strong>
-  <%= @article.published %>
-</p>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>
 <br>
 <br>
 
-
+<hr>
+<h3>Comments</h3>
 <div id="disqus_thread"></div>
 <script>
 
