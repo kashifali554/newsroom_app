@@ -14,6 +14,9 @@
       <% if can? :manage, @article %>
         <li><%= link_to 'Manage', "/manage", :class => "btn btn-primary" %></li>
       <% end %>
+      <% if can? :crud, @article %>
+        <li><%= link_to 'Write', "/articles/new", :class => "btn btn-primary" %></li>
+      <% end %>
       <% if current_user %>
         <li class="contact"><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
       <% else %>
