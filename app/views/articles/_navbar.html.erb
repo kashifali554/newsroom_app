@@ -14,7 +14,7 @@
       <% if can? :manage, @article %>
         <li><%= link_to 'Manage', "/manage", :class => "btn btn-primary" %></li>
       <% end %>
-      <% if can? :crud, @article %>
+      <% if can? :create, @article %>
         <li><%= link_to 'Write', "/articles/new", :class => "btn btn-primary" %></li>
       <% end %>
       <% if current_user %>

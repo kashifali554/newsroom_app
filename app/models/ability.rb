@@ -8,6 +8,11 @@ class Ability
     end
 
     if user && user.role == 1
+      can :read, :all
+      can :update, :destroy, Article do |article|
+        article.user == user
+      end
+      can :create
       alias_action :create, :read, :update, :destroy, :to => :crud
       can :crud, Article do |article|
         article.user == user
