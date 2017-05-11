@@ -32,7 +32,7 @@ Admin can assign user rules into user database(stretch).
 
 
 # Best Code:
-'''
+```
 if user && user.role == 2
   can :manage, :all
 end
@@ -55,7 +55,7 @@ if user && user.role == nil
     comment.user = user
   end
 end
-'''
+```
 
 # Future Development ideas
 - Make URL Pretty 
