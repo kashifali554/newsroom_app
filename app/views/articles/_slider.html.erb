@@ -9,13 +9,16 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <%= image_tag 'image01.jpeg' %>
+      <%= image_tag @articles.first.img, :class => "style_image" %>
+    </div>
+    <div>
+      <p><strong><%= link_to @articles.first.headline, @article %></strong></p>
     </div>
     <div class="item">
-      <%= image_tag 'image02.jpeg' %>
+      <%= image_tag 'image02.jpeg', :class => "style_image"  %>
     </div>
     <div class="item">
-      <%= image_tag 'image03.jpeg' %>
+      <%= image_tag 'image03.jpeg', :class => "style_image"  %>
     </div>
 
   </div>

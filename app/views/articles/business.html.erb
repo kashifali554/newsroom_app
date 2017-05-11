@@ -1,13 +1,16 @@
 <% @articles.each do |article| %>
   <% if article.category == 'business' %>
   <div class="row col-md-4">
-    <div>
-      <%= image_tag article.img, :class => "image_small" %>
-    </div><br>
-    <div>
-      <%= time_ago_in_words article.updated_at %>
+    <div class="col-md-4">
+      <div>
+        <%= image_tag article.img, :class => "image_small" %>
+      </div><br>
+      <div>
+        <%= time_ago_in_words article.updated_at %>
+      </div>
+      <div>
+        <p><strong><%= link_to article.headline, article %></strong></p>
+      </div>
     </div>
-    <p><strong><%= link_to article.headline, article %></strong></p>
-  </div>
-    <% end %>
+  <% end %>
 <% end %>
