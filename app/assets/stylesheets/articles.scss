@@ -22,20 +22,17 @@
   margin-left: 150px;
 }
 
-.jumbotron {
-  padding-left: 50px;
-  background-color: white;
-}
 
 
 .style_image{
-  height: 30em;
-  width: 40em;
+  height: 480px;
+  width: 852px;
 }
 
 .image_small{
   width: 25em;
   height: 25em;
+  text-align: center;
 }
 
 .e-options{
@@ -123,4 +120,16 @@
 //   margin: 0px;
 //   padding: 0px
 // }
+
+.jumbotron {
+  // text-align: center;
+  padding-top: 0px;
+  padding-left: 50px;
+  font-size: 18px;
+  background-color: white;
+}
+
+.text-container {
+  padding-right: 300px;
+}
 
