@@ -24,7 +24,14 @@
 
 <br>
 <br>
-
+  <div>
+   <% if can? :update, @article %>
+     <td><%= link_to 'Edit', edit_article_path(@article), :class => "btn btn-primary" %></td>
+   <% end %>
+   <% if can? :destroy, @article %>
+       <td><%= link_to 'Delete', @article, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
+   <% end %>
+  </div>
 <hr>
 <h3>Comments</h3>
 
