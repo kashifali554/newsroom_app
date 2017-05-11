@@ -1,0 +1,14 @@
+<div class="main col-md-12">
+  <div class="col-md-8 pull-left">
+      <%= image_tag @articles.first.img, :class => "style_image" %>
+  </div>
+  <div class="row col-md-4 pull-right text-xs-center">
+    <p><strong><%= link_to @articles.first.headline, "/articles/1" %></strong></p>
+    <div class="col-md-8 pull-right">
+      <p><strong><%= @articles.first.text.html_safe %></strong></p>
+      <div>
+        <p>Last updated <%= time_ago_in_words @articles.first.updated_at %> ago</p>
+      </div>
+    </div>
+  </div>
+</div>
