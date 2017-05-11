@@ -1,5 +1,7 @@
 # Newsroom
 
+Check this out on Heroku # https://glacial-escarpment-19018.herokuapp.com/
+
 - Newsroom app streamlines the newsroom workflow and gives journalists ability to work online. 
 - Localize this in Urdu, Hindi, Punjabi to use as CMS in Pakistan and India.
 - Potential localization in Arabic, Persian and Pashto.
@@ -14,7 +16,7 @@
 - News Editor: Editor can CRUD any article and create new article. Editor also has manage panel where they can search of stories and look for all stories.
 
 
-Admin can assign user rules into user database(stretch).
+- Admin can assign user rules into user database(stretch).
 
 # Wireframes, ERD and Data Models:
 https://github.com/kashifali554/newsroom_app/wiki
@@ -61,4 +63,3 @@ end
 
 # Links
 - Kashif Ali: https://www.linkedin.com/in/chkashifali
-- Heroku: https://glacial-escarpment-19018.herokuapp.com/
