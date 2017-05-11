@@ -45,12 +45,6 @@
   background-color: gray;
 }
 
-// body {
-//   margin: 0;
-//   padding: 0;
-//   background: #ccc;
-// }
-
 .nav ul {
   list-style: none;
   background-color: #444;
@@ -97,20 +91,6 @@
     display: inline-block;
     margin-right: -4px;
   }
-
-  /* Options 2 - Float
-  .nav li {
-    float: left;
-  }
-  .nav ul {
-    overflow: auto;
-    width: 600px;
-    margin: 0 auto;
-  }
-  .nav {
-    background-color: #444;
-  }
-  */
 }
 
 .col-md-4{
@@ -118,14 +98,6 @@
   overflow: hidden;
   text-align: center;
 }
-
-// .img-bg {
-//   background-size: cover;
-//   max-width: auto;
-//   max-height: auto;
-//   margin: 0px;
-//   padding: 0px
-// }
 
 .jumbotron {
   // text-align: center;

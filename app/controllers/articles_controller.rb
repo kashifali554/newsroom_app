@@ -1,5 +1,4 @@
 class ArticlesController < ApplicationController
-  # load_and_authorize_resource
   before_action :set_article, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :current_user, only: [:edit, :update, :destroy]
@@ -40,20 +39,15 @@ class ArticlesController < ApplicationController
     @articles = Article.all
   end
 
-  # GET /articles
-  # GET /articles.json
   def index
     @articles = Article.all
   end
 
-  # GET /articles/1
-  # GET /articles/1.json
   def show
     @article = Article.find(params[:id])
     # @comment = Comment.new
   end
 
-  # GET /articles/new
   def new
     @article = current_user.articles.build
 
@@ -66,7 +60,6 @@ class ArticlesController < ApplicationController
 
   end
 
-  # GET /articles/1/edit
   def edit
     if can? :update, @article
     end
@@ -75,8 +68,6 @@ class ArticlesController < ApplicationController
     end
   end
 
-  # POST /articles
-  # POST /articles.json
   def create
     @article = current_user.articles.build(article_params)
     # @article = Article.new(article_params)
@@ -92,8 +83,6 @@ class ArticlesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /articles/1
-  # PATCH/PUT /articles/1.json
   def update
     respond_to do |format|
       if @article.update(article_params)
@@ -106,8 +95,6 @@ class ArticlesController < ApplicationController
     end
   end
 
-  # DELETE /articles/1
-  # DELETE /articles/1.json
   def destroy
     # if current_user != @article.user
     #   redirect_to "/articles"

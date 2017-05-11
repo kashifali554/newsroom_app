@@ -1,34 +1,25 @@
 class CommentsController < ApplicationController
-  # before_action :set_comment
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :current_user, only: [:edit, :update, :destroy]
 
-  # GET /comments
-  # GET /comments.json
   def index
     @comments = Comment.all
   end
 
-  # GET /comments/1
-  # GET /comments/1.json
   # def show
 
   # end
 
-  # GET /comments/new
   def new
     @comment = current_user.comments.build
   end
 
-  # GET /comments/1/edit
   # def edit
   #   if current_user != @comment.user
   #     redirect_to root_path
   # end
 
-  # POST /comments
-  # POST /comments.json
   def create
     @comment = current_user.comments.build(comment_params)
     # use article ID in the url
