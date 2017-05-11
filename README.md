@@ -64,5 +64,6 @@ end
 - trending stories with view counts in aside.
 - Add more features in Manage panel.
 
-# Contributor
+# Links
 - Kashif Ali: https://www.linkedin.com/in/chkashifali
+- Heroku: https://glacial-escarpment-19018.herokuapp.com/
