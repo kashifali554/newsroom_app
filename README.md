@@ -16,13 +16,8 @@
 
 Admin can assign user rules into user database(stretch).
 
-# Wireframes:
-
-    (Coming Soon)
-
-# Data Models and ERD:
-
-    (Coming Soon)
+# Wireframes, ERD and Data Models:
+https://github.com/kashifali554/newsroom_app/wiki
 
 # Tech
 - Front-end: Bootstrap, Sass
