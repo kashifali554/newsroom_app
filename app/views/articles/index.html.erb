@@ -23,13 +23,15 @@
     <% link_to article.category, '/opinion' %>
   <% end %>
 
-  <div class="row col-md-4">
-    <div>
+  <div class="col-md-4">
+    <div class="img-bg">
       <%= image_tag article.img, :class => "image_small" %>
     </div><br>
     <div>
       <%= time_ago_in_words article.updated_at %>
     </div>
-    <p><strong><%= link_to article.headline, article %></strong></p>
+      <div>
+        <p><strong><%= link_to article.headline, article %></strong></p>
+      </div>
   </div>
 <% end %>
