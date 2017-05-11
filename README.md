@@ -1,15 +1,18 @@
 # Newsroom
 
-Newsroom app streamlines the newsroom workflow and gives journalists ability to work online.
-Target audience for this app is small and medium sized newsrooms and freelance bloggers and journalists.
+- Newsroom app streamlines the newsroom workflow and gives journalists ability to work online. 
+- Localize this in Urdu, Hindi, Punjabi to use as CMS in Pakistan and India.
+- Potential localization in Arabic, Persian and Pashto.
+- Target audience for this app is small and medium sized newsrooms and freelance bloggers and journalists.
+
 
 # User stories:
-- A registered (authenticated) user can sign in to their profile and CRUD their own comments and can share articles on social media.
+- Reader flow. Reader can read unlimited stores and comment via Facebook, Twitter, disqus account. User can also share the story on their social media accounts.
 
-- A reporter will sign-in and land on create story article page. Reporter can CRUD it's own articles and comments. Reporter cannot publish any article.
+- Reporter: Reporter can write an article and has ability to CRUD their own articles only.
 
-- Editor will land on articles index page. Editor can CRUD all stories and all comments.
-Only Editor can publish any article.
+- News Editor: Editor can CRUD any article and create new article. Editor also has manage panel where they can search of stories and look for all stories.
+
 
 Admin can assign user rules into user database(stretch).
 
@@ -25,24 +28,34 @@ Admin can assign user rules into user database(stretch).
 - Front-end: Bootstrap, Sass
 - Back-end: Ruby on Rails
 - Auth: Devise, CanCanCan
-- Other: Social Share, Trix Editor
+- Other: Social Share, Trix Editor, Disqus comments thread.
 
 
 # Best Code:
+'''
+if user && user.role == 2
+  can :manage, :all
+end
 
-# Milestones:
+if user && user.role == 1
+  can :read, :all
+  can :update, :destroy, Article do |article|
+    article.user == user
+  end
+  can :create
+  alias_action :create, :read, :update, :destroy, :to => :crud
+  can :crud, Article do |article|
+    article.user == user
+  end
+end
 
-- Auth: Finish auth and roles with enumerable in one day. Min
-- Articles and comments CRUD: Finish Articles and comments CRUD in one day.
-- Maximum time to finish back end and functionality till SUNDAY. (4 Days).
-- Front-end and Styling: 2 Days
-- Internationalization: Translate in Urdu and make website accessible to all readers.
-
-# Stretch: 
-- Make URL Pretty 
-- Add badges on profiles 
-- Make tags clickable.
-- trending stories etc.
+if user && user.role == nil
+  can :read, :all
+  can :create, Comment do |comment|
+    comment.user = user
+  end
+end
+'''
 
 # Future Development ideas
 - Make URL Pretty 
