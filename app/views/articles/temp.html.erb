@@ -1,3 +1,24 @@
+//Manage panel stuff
+
+  <div class="dropdown col-md-6">
+      <select name="cateogery" id="cateogery">
+          <option value="1">Latest</option>
+          <option value="2">US</option>
+          <option value="3">Politics</option>
+          <option value="4">Business</option>
+          <option value="5">Sports</option>
+          <option value="6">Opinion</option>
+      </select>
+      <%= submit_tag("Search") %>
+  </div>
+
+  <%= form_tag("/search", method: "get") do %>
+    <%= label_tag(:q, "Search for:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+
+
 //Index page stuff
 
 <p id="notice"><%= notice %></p>

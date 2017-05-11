@@ -5,7 +5,11 @@ class ArticlesController < ApplicationController
   before_action :current_user, only: [:edit, :update, :destroy]
 
   def search
-    @articles = Article.all
+    @articles = if params[:q]
+      Article.where("category Like '#{params[:q].to_s}'")
+    else
+      @article = Article.all
+    end
   end
 
   def manage

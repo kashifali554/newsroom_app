@@ -1,2 +1,11 @@
 <h1>Search results</h1>
+  <% for article in @articles %>
 
+  <div>
+    <strong> <%= article.category %> </strong>
+    <strong> <%= article.headline %></strong>
+    <%= image_tag article.img, :class => "style_image" %>
+  </div>
+
+
+  <% end %>
