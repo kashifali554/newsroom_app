@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   #   resources :comments, except: [:edit, :update, :destroy]
   # end
 
+  # resources :admin do
+  #   resources :articles
+  # end
+
   root "articles#index"
 
   get '/manage', to: "articles#manage"
